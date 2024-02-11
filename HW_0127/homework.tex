@@ -1,0 +1,135 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section*{Problem 1}
+
+~
+
+\subsection*{Question a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &g\circ f(x)=g(f(x))\\
+        &g\circ f(x_1)=g\circ f(x_2)\\
+        \Rightarrow&f(x_1)=f(x_2)\leftarrow g\text{ is one-to-one}\\
+        \Rightarrow&x_1=x_2 \leftarrow f\text{ is one-to-one}\\
+        &g\circ f(x_1)=g\circ f(x_2)\implies x_1=x_2\\
+        \Rightarrow&g\circ f \text{ is one-to-one}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Question b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &g\circ f(x)=g(f(x))\\
+        &\forall u \in C , \exists v \in \{n|n=f(x),x\in A\} : u=g(v)\leftarrow g \text{ is onto}\\
+        &\forall v \in \{n|n=f(x),x\in A\} , \exists w \in A : v=f(w)\leftarrow f \text{ is onto}\\
+        \Rightarrow &\forall u \in C , \exists w \in A : u=g(f(w))=g\circ f(w)\\
+        \Rightarrow &g \circ f \text{ is onto}
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Problem 2}
+
+~
+
+\subsection*{Question a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &F\coloneqq \{f|f:\{0,1\}\rightarrow\mathbb{Z}_+\}\\
+        &\text{There are only 2 elements in domain of }f\\
+        &\text{By permutation: }|F|=|\mathbb{Z}_+ \times\mathbb{Z}_+| \\
+        &|\mathbb{Z}_+ \times\mathbb{Z}_+|=|\mathbb{Z}_+|\\
+        \Rightarrow&F\text{ is countable}\\
+    \end{split}
+\end{equation*}
+
+\subsection*{Question b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &F\coloneqq \{f|f:\mathbb{Z}_+\rightarrow\mathbb{Z}_+\}\\
+        &\text{Suppose }F\text{ is countable, We can construct a table for all the functions: }\\
+        &\begin{array}{c|cccc}
+            &n=1&n=2&n=3&\cdots\\
+            \hline\\
+            f_1(n)&f_1(1)&f_1(2)&f_1(3)&\cdots\\
+            f_2(n)&f_2(1)&f_2(2)&f_2(3)&\cdots\\
+            f_3(n)&f_3(1)&f_3(2)&f_3(3)&\cdots\\
+            \vdots &&&&\ddots \\
+        \end{array}\\
+        &g(x)\coloneqq \begin{cases}
+            0,f_a(a)=1\\
+            1,f_a(a)\ne 1\\
+        \end{cases}\\
+        &\text{According to the definition, }g(x)\text{ cannot be any of the }f_n(x)\\
+        \Rightarrow& F\text{ is uncountable}\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Problem 3}
+
+~
+
+\subsection*{Question a}
+
+\begin{equation*}
+    \begin{split}
+        &f(x)\coloneqq 3x,x\in\mathbb{Z}_+\\
+        \Rightarrow&f:\mathbb{Z}_+\rightarrow 3\mathbb{Z}_+\\
+        &f(x_1)=f(x_2)\\
+        \Rightarrow&3x_1=3x_2\\
+        \Rightarrow&x_1=x_2\\
+        \Rightarrow&f(x)\text{ is one-to-one}\\
+        &\forall y\in3\mathbb{Z}_+,\exists x\in\mathbb{Z}_+:x=\frac{y}{3}\\
+        \Rightarrow& f(x)\text{ is surjective}\\
+        \Rightarrow& f(x)\text{ is bijective}\\
+        \Rightarrow& |\mathbb{Z}_+|=|3\mathbb{Z}_+|\\
+        &\mathbb{Z}=\mathbb{Z}_+\cup\{0\}\cup\mathbb{Z}_-\\
+        &\mathbb{Z}\text{ is countable}\\
+        \Rightarrow&\mathbb{Z}_+\text{ is countable}\\
+        \Rightarrow&|\mathbb{Z}_+|=|\mathbb{Z}|\\
+        \Rightarrow&|\mathbb{Z}|=|3\mathbb{Z}_+|
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Question b}
+
+\begin{equation*}
+    \begin{split}
+        &\text{Suppose: }\exists f:\wp (A)\rightarrow A\\
+        &\text{There is no one-to-one map for }\wp (A)\rightarrow A\\
+        \Rightarrow&f\text{ cannot be one-to-one}\\
+        \Rightarrow&f\text{ is not bijective}\\
+        \Rightarrow&|\wp(A)|\ne|A|\\
+    \end{split}
+\end{equation*}
+
+\end{document}

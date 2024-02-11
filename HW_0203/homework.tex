@@ -1,0 +1,126 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+\section*{Problem 1}
+
+~
+
+\subsection*{Question a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &X\setminus \emptyset=X\leftarrow\text{a member of the set}\\
+        \Rightarrow&\emptyset\in \mathcal{T}_f\\
+        &X\setminus X=\emptyset\leftarrow \text{ is finite}\\
+        \Rightarrow&X\in\mathcal{T}_f\\
+        &\exists U_i\in \mathcal{T}_f\\
+        \Rightarrow&X\setminus U_i \text{ is finite}\\
+        \Rightarrow&\cap(X\setminus U_i)\text{ is finite}\\
+        \Rightarrow&X\setminus \cup U_i\text{ is finite}\leftarrow \text{ De Morgan's Law}\\
+        \Rightarrow&\cup U_i\in \mathcal{T}_f\\
+        &X\setminus U_i \text{ is finite}\\
+        \Rightarrow&\cup(X\setminus U_i)\text{ is finite}\leftarrow\text{finite unions of finite set is finite}\\
+        \Rightarrow&X\setminus \cap U_i\text{ is finite}\leftarrow \text{ De Morgan's Law}\\
+        \Rightarrow&\cap U_i\in \mathcal{T}_f\\
+        \Rightarrow& \mathcal{T}_f\text { is a topology on }X
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Question b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &X\setminus \emptyset=X\leftarrow\text{a member of the set}\\
+        \Rightarrow&\emptyset\in \mathcal{T}_c\\
+        &X\setminus X=\emptyset\leftarrow \text{ is countable}\\
+        \Rightarrow&X\in\mathcal{T}_c\\
+        &\exists U_i\in \mathcal{T}_c\\
+        \Rightarrow&X\setminus U_i \text{ is countable}\\
+        \Rightarrow&\cap(X\setminus U_i)\text{ is countable}\\
+        \Rightarrow&X\setminus \cup U_i\text{ is countable}\leftarrow \text{ De Morgan's Law}\\
+        \Rightarrow&\cup U_i\in \mathcal{T}_c\\
+        &X\setminus U_i \text{ is countable}\\
+        \Rightarrow&\cup(X\setminus U_i)\text{ is countable}\leftarrow\text{countable unions of countable set is countable}\\
+        \Rightarrow&X\setminus \cap U_i\text{ is countable}\leftarrow \text{ De Morgan's Law}\\
+        \Rightarrow&\cap U_i\in \mathcal{T}_c\\
+        \Rightarrow& \mathcal{T}_c\text { is a topology on }X
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Question c}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\forall U\in\mathcal{T}_f:\\
+        &X\setminus U\text{ is finite}\\
+        \Rightarrow&X\setminus U\text{ is countable}\\
+        \Rightarrow&U\in \mathcal{T}_c\\
+        \Rightarrow&\mathcal{T}_f\subseteq \mathcal{T}_c\\
+        \Rightarrow&\mathcal{T}_c\text{ is finer than }\mathcal{T}_f\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Problem 2}
+
+~
+
+\subsection*{Question a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &a,b\in\mathbb{Q} \\
+        &\mathcal{B} =\{(a,b)|a<b,a,b\in\mathbb{Q} \}\\
+        \Rightarrow&|\mathcal{B}|=|\mathbb{Q}^2|\\
+        &\mathbb{Q} \text{ is countable}\\
+        \Rightarrow&\mathbb{Q}^2\text{ is countable}\\
+        \Rightarrow&\mathcal{B}\text{ is countable}
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Question b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\forall n\in\mathbb{R} : n\in(n-1,n+1)\\
+        &\exists B\in\mathcal{B} :(n-1,n+1)\subseteq B\in\mathcal{B}\\
+        \Rightarrow&\forall n\in\mathbb{R},\exists B\in\mathcal{B}:n\in B\\
+        &\text{Suppose}:B_1=(a,b),B_2=(c,d)\in\mathcal{B}\\
+        &x\in B_1\cap B_2\\
+        \Rightarrow&x\in(\max(a,c),\min(b,d))\\
+        &B_3\coloneqq (\max(a,c),\min(b,d))\\
+        \Rightarrow&x\in B_3\\
+        &B_1,B_2\in \mathcal{B} \\
+        \Rightarrow&a,b,c,d\in\mathbb{Q} \\
+        \Rightarrow&\max(a,c),\min(b,d)\in\mathbb{Q} \\
+        \Rightarrow&B_3\in\mathcal{B} \\
+        \Rightarrow&\forall x\in B_1\cap B_2,\exists B_3\in\mathcal{B}:x\in B_3\\
+        \Rightarrow&\mathcal{B} \text{ is a basis for the standard topology on }\mathbb{R} 
+    \end{split}
+\end{equation*}
+\end{document}

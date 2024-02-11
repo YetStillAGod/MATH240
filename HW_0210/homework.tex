@@ -1,0 +1,122 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section*{Problem 1}
+
+~
+
+\begin{equation*}
+\begin{split}
+    &\mathcal{B} \coloneqq \{\bigcap U_i|U_i\in \mathcal{S} \}\\
+    \Rightarrow&\mathcal{B}=\{\emptyset,[0,1),\{\frac{1}{2},\frac{\pi}{3}\},[1,2],\{\frac{1}{2}\},\{\frac{\pi}{3}\}\}\\
+    &\mathcal{T} \coloneqq \{\bigcup U_i|U_i\in \mathcal{B} \}\\
+    \Rightarrow&\mathcal{T}=\{\emptyset,[0,1),\{\frac{1}{2},\frac{\pi}{3}\},[1,2],\{\frac{1}{2}\},\{\frac{\pi}{3}\},[0,1)\cup\{\frac{\pi}{3}\},\{\frac{1}{2}\}\cup[1,2],X\}\\
+    &\emptyset,X\in\mathcal{T},\text{Also according to the structure of }\mathcal{T}:\mathcal{T} \text{ is a topology on }X\\
+    &\text{open sets}:\\
+    &\emptyset\\
+    &[0,1)\\
+    &\{\frac{1}{2},\frac{\pi}{3}\}\\
+    &[1,2]\\
+    &\{\frac{1}{2}\}\\
+    &\{\frac{\pi}{3}\}\\
+    &[0,1)\cup\{\frac{\pi}{3}\}\\
+    &\{\frac{1}{2}\}\cup[1,2]\\
+    &X\\
+\end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Problem 2}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\forall x\in A, \exists U_x\in X:x\in U_x\subseteq A\\
+        \Rightarrow&A=\bigcup_{x\in A}U_x\\
+        &U_x\in X\\
+        \Rightarrow&U_x\text{ is open}\\
+        \Rightarrow&A\text{ is open}\leftarrow\text{finite union of open sets is open}\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Problem 3}
+
+~
+
+\subsection*{Question a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\forall n \in \mathbb{R}:n\in [n-1,n+1),n-1<n+1\\
+        &\exists B\in\mathcal{B} :[n-1,n+1)\subseteq B\in\mathcal{B}\\
+        \Rightarrow&\forall n\in\mathbb{R},\exists B\in\mathcal{B}:n\in B\\
+        &\text{Suppose}:B_1=[a,b),B_2=[c,d)\in\mathcal{B}\\
+        &x\in B_1\cap B_2\\
+        \Rightarrow&x\in[\max(a,c),\min(b,d))\\
+        &B_3\coloneqq [\max(a,c),\min(b,d))\\
+        \Rightarrow&x\in B_3\\
+        &B_1,B_2\in \mathcal{B} \\
+        \Rightarrow&a,b,c,d\in\mathbb{R} \\
+        \Rightarrow&\max(a,c),\min(b,d)\in\mathbb{R} \\
+        \Rightarrow&B_3\in\mathcal{B} \\
+        \Rightarrow&\forall x\in B_1\cap B_2,\exists B_3\in\mathcal{B}:x\in B_3\\
+        \Rightarrow&\mathcal{B} \text{ is a basis of a topology on }\mathbb{R} \\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Question b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\forall n \in \mathbb{R}:n\in [n-1,n+1),n-1<n+1\\
+        &\exists C\in\mathcal{C} :[n-1,n+1)\subseteq C\in\mathcal{C}\\
+        \Rightarrow&\forall n\in\mathbb{R},\exists C\in\mathcal{C}:n\in C\\
+        &\text{Suppose}:C_1=[a,b),C_2=[c,d)\in\mathcal{C}\\
+        &x\in C_1\cap C_2\\
+        \Rightarrow&x\in[\max(a,c),\min(b,d))\\
+        &C_3\coloneqq [\max(a,c),\min(b,d))\\
+        \Rightarrow&x\in C_3\\
+        &C_1,C_2\in \mathcal{C} \\
+        \Rightarrow&a,b,c,d\in\mathbb{Q} \\
+        \Rightarrow&\max(a,c),\min(b,d)\in\mathbb{Q} \\
+        \Rightarrow&C_3\in\mathcal{C} \\
+        \Rightarrow&\forall x\in C_1\cap C_2,\exists C_3\in\mathcal{C}:x\in C_3\\
+        \Rightarrow&\mathcal{C} \text{ is a basis of a topology on }\mathbb{R}\\
+        &\text{Suppose}:\mathcal{C} \text{ is a basis for lower limit topology}\\
+        &|\mathcal{C} |=|\mathbb{Q} \times\mathbb{Q} |\\
+        &\mathbb{Q}\text{ is countable}\\
+        \Rightarrow&\mathcal{C} \text{ is countable}\\
+        \Rightarrow&\mathbb{Q} \times\mathbb{Q}\text{ is countable}\\
+        &\forall r\in\mathbb{R} ,\exists U_r \in \mathcal{C} :r\in U_r\\
+        &\text{Define}:U_r\subset [r,+\infty)\\
+        &f:\mathbb{R} \rightarrow \mathcal{C} :f(r)\coloneqq U_r\\
+        &\exists r_1\ne r_2\in \mathbb{R}\\
+        &f(r_1)\ne f(r_2)\leftarrow \min(f(r_1))\ne \min(f(r_2))\\
+        \Rightarrow&r_1\ne r_2\implies f(r_1)\ne f(r_2)\\
+        \Rightarrow&f\text{ is one-to-one}\\
+        &\mathbb{R} \text{ is uncountable}\\
+        \Rightarrow&\mathcal{C} \text{ is uncountable}\\
+        &\mathcal{C} \text{ is countable}\nLeftrightarrow\mathcal{C} \text{ is uncountable}\\
+        \Rightarrow&\mathcal{C} \text{ is not a basis for lower limit topology}\\
+    \end{split}
+\end{equation*}
+\end{document}
