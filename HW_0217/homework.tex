@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section*{Question 1}
+
+\begin{equation*}
+    \begin{split}
+        &\mathcal{T} \text{ is defined as the topology on }X\\
+        &\mathcal{T}_Y\coloneqq\{U\cap Y|U\in \mathcal{T} \}\\
+        &\mathcal{T}_{A\in Y}\coloneqq\{V\cap A|,V\in \mathcal{T}_Y\}\\
+        &\mathcal{T}_{A\in X}\coloneqq\{U\cap A|U\in\mathcal{T} \}\\
+        &\mathcal{T}_{A\in Y}\subset\mathcal{T}_{A\in X}:\\
+        &\exists V\in \mathcal{T}_Y :V\cap A\in\mathcal{T}_{A\in Y}\\
+        \Rightarrow&\exists U\in\mathcal{T} : V=U\cap Y\\
+        &V\cap A=(U\cap Y)\cap A=U\cap(Y\cap A)=U\cap A\\
+        \Rightarrow&V\cap A=\mathcal{T}_{A\in X}\\
+        \Rightarrow&\mathcal{T}_{A\in Y}\subset\mathcal{T}_{A\in X}\\
+        &\mathcal{T}_{A\in X}\subset\mathcal{T}_{A\in Y}:\\
+        &\exists U\cap A \in\mathcal{T}_{A\in X}\\
+        \Rightarrow&U\in\mathcal{T} \\
+        &U\cap Y\in\mathcal{T} _{Y}\\
+        \Rightarrow&(U\cap Y)\cap A\in\mathcal{T}_{A\in Y}\\
+        &(U\cap Y)\cap A=U\cap (Y\cap A)=U\cap A\\
+        \Rightarrow&U\cap A\in\mathcal{T}_{A\in Y}\\
+        \Rightarrow&\mathcal{T}_{A\in X}\subset\mathcal{T}_{A\in Y}\\
+        \Rightarrow&\mathcal{T}_{A\in X}=\mathcal{T}_{A\in Y}\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 2}
+
+\begin{equation*}
+    \begin{split}
+        &\text{Consider a basis for }X\times Y:\\
+        &\{(U,V)|U\text{ is open in }X,V\text{ is open in }Y\}\\
+        &\pi_1((U,V))\coloneqq U\land \pi_1((U,V))\coloneqq V\\
+        &(U,V), U, V\text{ are open by the definition of the basis}\\
+        &\pi_1((U,V))=U\text{ is open for } (U,V)\text{ is open}\\
+        \Rightarrow&\pi_1:X\times Y\rightarrow X\text{ is open}\\
+        &\pi_2((U,V))=V\text{ is open for } (U,V)\text{ is open}\\
+        \Rightarrow&\pi_2:X\times Y\rightarrow Y\text{ is open}\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 3}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{Suppose }U\text{ is open in }\mathbb{R} _d\times \mathbb{R} \\
+        &\exists(a,b)\in U\\
+        &\text{Consider}:\{a\}\times(c,d),a,c,d\in \mathbb{R} \text{ as a basis}\\
+        &\{a\}\times(c,d)=((a,c),(a,d))\\
+        &(a,b)\text{ is open }\in \{a\}\times(c,d)=((a,c),(a,d))\subseteq U\\
+        \Rightarrow&(a,b)\text{ is an interior}\\
+        &\text{Suppose }U\text{ is open in }\mathbb{R}\times \mathbb{R}\\
+        &\exists(a,b)\in U\\
+        &\exists(a_1,b_1)\times(a_2,b_2),a_1,a_2,b_1,b_2\in \mathbb{R}:(a,b)\in(a_1,b_1)\times(a_2,b_2)\\
+        &m\coloneqq\begin{cases}
+            b-1,a>a_1\\
+            b,a=a_1\\
+        \end{cases}\\
+        \Rightarrow&\text{By definition}:(a_1,b_1)<(a,m)<(a,b)\\
+        &n\coloneqq\begin{cases}
+            b+1,a<a_2\\
+            b,a=a_2\\
+        \end{cases}\\
+        \Rightarrow&\text{By definition}:(a,b)<(a,n)<(a_2,b_2)\\
+        \Rightarrow&(a,b)\in \{a\}\times(m,n)\subseteq ((a_1,b_1),(a_2,b_2))\subseteq U\\
+        \Rightarrow&(a,b)\text{ is an interior}\\
+        &\text{They are the same}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\mathbb{R} ^2\text{ generates from }(a,b)\times(c,d):\text{ open}\\
+        &\mathbb{R} ^2\text{ takes horizontal and vertical lines into consideration simultaneously}\\
+        &\text{Dictionary order topology takes vertical lines into consideration first}\\
+        &\text{It disregards horizontal direction when defining open sets}\\
+        \Rightarrow&\mathbb{R} ^2\text{ is finer}\\
+    \end{split}
+\end{equation*}
+\end{document}
