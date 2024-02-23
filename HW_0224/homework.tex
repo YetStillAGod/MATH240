@@ -1,0 +1,156 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section*{Question 1}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &A\coloneqq[0\times0,0\times1]\\
+        &X\setminus A=((I\times I)\setminus A)\cup \{e\times0\}\\
+        &X\setminus A=(\frac{1}{n}\times 0,\frac{1}{n}\times1)\cup\{e\times0\}\\
+        &B\coloneqq(\frac{1}{n}\times1,e\times0]\\
+        &B\cap X=(\frac{1}{n}\times 0,\frac{1}{n}\times1)\cup\{e\times0\}=X\setminus A\\
+        &B\text{ is not closed nor open in }\mathbb{R}^2 \\
+        \Rightarrow&X\setminus A\text{ is not closed nor open}\\
+        \Rightarrow&A\text{ is not closed nor open}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &I\times I=\{(a,b),0\leqslant a< b\leqslant 1\}\\
+        \Rightarrow&I\times I=\{(a,b)\}\text{ is open}\\
+        &\overline{I\times I}\text{ is the set containing all the limit points of }I\times I\\
+        \Rightarrow&\overline{I\times I}=\{[a,b],0\leqslant a< b\leqslant 1\}\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 2}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{Define the finite complement topology }X\\
+        &\exists x\in X,U_x\text{ is the nbhd of }x\\
+        \Rightarrow&{U_x}^\complement\text{ is finite}\\
+        \Rightarrow&\exists m\in\mathbb{N} :\forall n>m,\frac{1}{n}\notin {U_x}^\complement\\
+        \Leftrightarrow&\exists m\in\mathbb{N} :\forall n>m,\frac{1}{n}\in {U_x}\\
+        \Rightarrow&U_x\cap(\left\{\frac{1}{n}\right\}^\infty_{n=1}\setminus \{x\})\ne \emptyset\\
+        \Rightarrow&\left\{\frac{1}{n}\right\}^\infty_{n=1}\text{ converges to }x\\
+        &x\text{ is arbitrary}\\
+        \Rightarrow&\left\{\frac{1}{n}\right\}^\infty_{n=1}\text{ converges to all }x\in \mathbb{R} \\    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 3}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &A\subset B\\
+        &\exists x\in \overline{A},U_x\text{ is nbhd of }x\\
+        \Rightarrow&\exists U_x:U_x\cap A\ne \emptyset\\
+        &A\subset B\\
+        \Rightarrow&U_x\cap B\ne\emptyset\\
+        \Rightarrow&x\in\overline{B}\\
+        &\forall x\in \overline{A},x\in\overline{B}\\
+        \Rightarrow&\overline{A}\subset\overline{B}\\
+        \Rightarrow&A\subset B\implies\overline{A}\subset\overline{B}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\overline{A}\cup\overline{B}\subseteq\overline{A\cup B}:\\
+        &A\subset A\cup B\\
+        \Rightarrow&\overline{A}\subset \overline{A\cup B}\\
+        &B\subset A\cup B\\
+        \Rightarrow&\overline{B}\subset \overline{A\cup B}\\
+        \Rightarrow&\overline{A}\cup\overline{B}\subseteq\overline{A\cup B}\\
+        &\overline{A\cup B}\subseteq\overline{A}\cup\overline{B}:\\  
+        &A\subset \overline{A}\land B\subset\overline{B}\\
+        \Rightarrow&A\cup B\subset\overline{A}\cup\overline{B}\\
+        &\overline{A\cup B}\text{ is the smallest closed set containing } A\cup B\\
+        &\text{Any other closed set containing }A\cup B\text{ contains }\overline{A\cup B}\\
+        \Rightarrow&\overline{A\cup B}\subseteq \overline{A}\cup\overline{B}\\
+        \Rightarrow&\overline{A}\cup\overline{B}=\overline{A\cup B}\\   
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem c}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\exists x\in \bigcup_\alpha\overline{A_\alpha},U_x\text{ is the nbhd of }x\\
+        &\exists \alpha,x\in \overline{A_\alpha}\\
+        \Rightarrow&U_x\cap A_\alpha\ne\emptyset\\
+        \Rightarrow&(U_x\cap A_1)\cup(U_x\cap A_2)\cup...\cup(U_x\cap A_\alpha)\cup...\ne\emptyset\\
+        &U_x\cap(A_1\cup A_2\cup...\cup A_\alpha\cup ...)\ne\emptyset\\
+        \Rightarrow&U_x\cap(\bigcup_\alpha A_\alpha)\ne\emptyset\\
+        \Rightarrow&x\in\overline{\bigcup_\alpha A_\alpha}\\
+        \Rightarrow&\bigcup_\alpha\overline{A_\alpha}\subset\overline{\bigcup_\alpha A_\alpha}\\
+        &\lim_{n\rightarrow\infty}\frac{1}{n}=0\\
+        \Rightarrow&\forall U_0,U_0\cap\{\left\{\frac{1}{n}\right\}^{\infty}_{n=1}\setminus\{0\}\}\ne\emptyset\\
+        \Rightarrow&\{\left\{\frac{1}{n}\right\}^{\infty}_{n=1}\setminus\{0\}\}\cap(\bigcup U_0)\ne\emptyset\\
+        &\text{Suppose } m\text{ has }\{\left\{\frac{1}{n}\right\}^{\infty}_{n=1}\setminus\{0\}\}\text{ as its nbhd}\\
+        \Rightarrow&m\in \overline{\bigcup U_0}\\
+        &\text{Suppose }m\in \bigcup \overline{U_0}\\
+        &\exists \overline{U_{0_a}},\overline{U_{0_b}}\subset \bigcup U_0:m\in \overline{U_{0_a}} \land m\notin \overline{U_{0_b}}\\
+        \Rightarrow&\{\left\{\frac{1}{n}\right\}^{\infty}_{n=1}\setminus\{0\}\}\cap U_{0_a}\ne\emptyset\land \cap U_{0_b}=\emptyset\\
+        &\{\left\{\frac{1}{n}\right\}^{\infty}_{n=1}\setminus\{0\}\}\cap U_{0_a}\ne\emptyset\\
+        \Rightarrow&0\in \overline{\{\left\{\frac{1}{n}\right\}^{\infty}_{n=1}\setminus\{0\}\}}\\
+        &\{\left\{\frac{1}{n}\right\}^{\infty}_{n=1}\setminus\{0\}\}\cap U_{0_b}=\emptyset\\
+        \Rightarrow&0\notin \overline{\{\left\{\frac{1}{n}\right\}^{\infty}_{n=1}\setminus\{0\}\}}\\
+    \end{split}
+\end{equation*}
+
+\begin{equation*}
+    \begin{split}
+        &0\in \overline{\{\left\{\frac{1}{n}\right\}^{\infty}_{n=1}\setminus\{0\}\}}\nLeftrightarrow0\notin \overline{\{\left\{\frac{1}{n}\right\}^{\infty}_{n=1}\setminus\{0\}\}}\\
+        \Rightarrow&m\notin \bigcup \overline{U_0}\land m\in m\in \overline{\bigcup U_0}\implies\text{Equality fails}\\
+    \end{split}
+\end{equation*}
+\end{document}
