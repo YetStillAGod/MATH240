@@ -1,0 +1,187 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section*{Question 1}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &i\text{ is continuous}\implies \mathcal{T} \subseteq\mathcal{T} ':\\
+        &\exists U\in \mathcal{T} \\
+        &U=i^{-1}(U)\in\mathcal{T}' \\
+        \Rightarrow&\forall U\in\mathcal{T} ,U\in\mathcal{T} '\\
+        \Rightarrow&\mathcal{T} \subseteq\mathcal{T} '\\
+        &\\
+        &\mathcal{T} \subseteq\mathcal{T} '\implies i\text{ is continuous}:\\
+        &\forall U\in \mathcal{T} ,\exists i^{-1}:i^{-1}(U)=U\in\mathcal{T} '\\
+        \Rightarrow&i\text{ is continuous}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &i\text{ is the identity function}\\
+        \Rightarrow&i\text{ is bijective}\\
+        &i\text{ is continuous}\Leftrightarrow \mathcal{T} \subseteq \mathcal{T} '\\
+        \Rightarrow&i^{-1}\text{ is continuous}\Leftrightarrow \mathcal{T}' \subseteq \mathcal{T} \\
+        &\mathcal{T}' \subseteq \mathcal{T}\land\mathcal{T} \subseteq \mathcal{T} '\implies\mathcal{T}' = \mathcal{T}\\
+        \Rightarrow&i\text{ is homeomorphism} \Leftrightarrow \mathcal{T} = \mathcal{T} '\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 2}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &U\setminus A\\
+        =&U\cap(X\setminus A)\\
+        &A\text{ is closed}\\
+        \Rightarrow&X\setminus A\text{ is open}\\
+        \Rightarrow&U\setminus A=U\cap(X\setminus A)\text{ is open}\\
+        &\\
+        &A\setminus U\\
+        =&A\cap(X\setminus U)\\
+        &U\text{ is open}\\
+        \Rightarrow&X\setminus U\text{ is closed}\\
+        \Rightarrow&A\setminus U=A\cap(X\setminus U)\text{ is closed}\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 3}
+
+~
+
+\subsection*{Problem a}
+
+\begin{equation*}
+    \begin{split}
+        &\text{Suppose}:\exists x\in Bd(A)\cap Int(A)\\
+        \Rightarrow&x\in Bd(A)\land x\in \bigcup_{U\subseteq A\text{ open}}U\\
+        &\exists U_x\text{ is nbhd}:U_x\subseteq A\\
+        &Bd(A)=\overline{A}\cap\overline{X\setminus A}\\
+        \Rightarrow&x\in \overline{X\setminus A}\\
+        \Rightarrow&U_x\cap \overline{X\setminus A}\ne \emptyset\\
+        &U_x\cap \overline{X\setminus A}\ne \emptyset\nLeftrightarrow U_x\subseteq A\\
+        \Rightarrow&Bd(A)\cap Int(A)=\emptyset\\
+        &\\
+        &\overline{A}\subseteq Int(A)\cup Bd(A)\\
+        &\exists x\in \overline{A}\\
+        &\text{If } \exists U_x\subseteq A\\
+        \Rightarrow&x\in Int(A)\\
+        &\text{If } \nexists U_x\subseteq A\\
+        &\exists m \in U_x:m\notin A\\
+        \Rightarrow&m\in U_x\cap(X\setminus A)\\
+        \Rightarrow&U_x\cap(X\setminus A)\ne\emptyset\\
+        \Rightarrow&x\in \overline{X\setminus A}\\
+        \Rightarrow&x\in Bd(A)\\
+        \Rightarrow&x\in Int(A)\cup Bd(A)\\
+        &\\
+        &Int(A)\cup Bd(A)\subseteq \overline{A}\\
+        &\text{If }x\in Int(A)\\
+        &Int(A)\subseteq A\subseteq \overline{A}\\
+        \Rightarrow&x\in\overline{A}\\
+        &\text{If }x\in Bd(A)\\
+        &Bd(A)=\overline{A}\cap\overline{X\setminus A}\\
+        \Rightarrow&x\in\overline{A}\\
+        \Rightarrow&x\in \overline{A}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &Bd(A)=\emptyset\implies A\text{ is clopen}:\\
+        &\overline{A}=Int(A)\cup Bd(A)\\
+        \Rightarrow&\overline{A}=Int(A)\\
+        &Int(A)\subseteq A\subseteq\overline{A}\\
+        \Rightarrow&A=Int(A)=\overline{A}\\
+        \Rightarrow&A\text{ is clopen}\\
+        &\\
+        &A\text{ is clopen}\implies Bd(A)=\emptyset:\\
+        &A=\overline{A}\\
+        \Rightarrow&\overline{X\setminus A}=X\setminus A\\
+        \Rightarrow&Bd(A)=\overline{A}\cap\overline{X\setminus A}=A\cap(X\setminus A)=\emptyset\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection{Problem c}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &U\text{ is open }\implies Bd(U)=\overline{U}\setminus U:\\
+        &U\text{ is open}\\
+        \Rightarrow&X\setminus U\text{ is closed}\\
+        \Rightarrow&X\setminus U=\overline{X\setminus U}\\
+        &Bd(U)=\overline{U}\cap\overline{X\setminus U}\\
+        \Rightarrow&Bd(U)=\overline{U}\cap(X\setminus U)=\overline{U}\setminus U\\
+        &\\
+        &Bd(U)=\overline{U}\setminus U\implies U\text{ is open}\\
+        &\text{Suppose} \exists x\in U\setminus Int(U)\\
+        &\exists U_x\text{ nbhd of }x: x\in U_x\cap U\\
+        \Rightarrow&U_x\cap U\ne \emptyset\\
+        &x\notin Int(U)\implies U_x\notin U\\
+        \Rightarrow&U_x\setminus U\ne \emptyset\\
+        \Rightarrow&U_x\cap(X\setminus U)\ne\emptyset\\
+        \Rightarrow&x\in\overline{U}\cap\overline{X\setminus U}\\
+        \Rightarrow&x\in Bd(U)\\
+        \Rightarrow&x\in \overline{U}\setminus U\nLeftrightarrow x\in U\\
+        \Rightarrow&U\subseteq Int(U)\\
+        \Rightarrow&U=Int(U)\\
+        &U\text{ is open}\\
+        \Rightarrow&U\text{ is open }\Leftrightarrow Bd(U)=\overline{U}\setminus U\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem d}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{Consider standard topology on }\mathbb{R} \\
+        &U\coloneqq (-1,0)\cup(0,1)\\
+        \Rightarrow&\overline{U}=[-1,1]\\
+        \Rightarrow&Int(\overline{U})=(-1,1)\ne U\\
+    \end{split}
+\end{equation*}
+\end{document}
