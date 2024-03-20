@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+\section*{Question 1}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{Suppose }g,h\text{ extend from }f\land \text{ defined on }\overline{A}\\
+        &\exists x\in \overline{A}:g(x)\ne h(x)\\
+        &Y\text{ is Hausdorff}\\
+        \Rightarrow&g(x)\in U,h(x)\in V,U\cap V=\emptyset\\
+        \Rightarrow&x\in g^{-1}(U)\cap h^{-1}(V)\\
+        &g^{-1}(U)\text{ and }h^{-1}(V)\text{ are open because of continuity}\\
+        \Rightarrow&\exists x'\in A\cap g^{-1}(U)\cap h^{-1}(V)\\
+        &\text{Since }g,h\text{ extend }f\\
+        \Rightarrow&f(x')=g(x')=h(x'),x'\in A\\
+        \Rightarrow&U,V\text{ are not disjoint}\nLeftrightarrow U\cap V=\emptyset\\
+        \Rightarrow&\text{uniqueness}\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 2}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\mathcal{B}\text{ is a basis of }B\\
+        &\mathcal{D}\text{ is a basis of }D\\
+        \Rightarrow&\mathcal{B} \times\mathcal{D} \text{ is a basis of }B\times D\\
+        &\mathcal{A}\coloneqq f^{-1}(\mathcal{B})\\
+        \Rightarrow&\mathcal{A}\text{ is open in }A\\
+        &\mathcal{B}=f(\mathcal{A})\\
+        &\mathcal{C}\coloneqq f^{-1}(\mathcal{D})\\
+        \Rightarrow&\mathcal{C}\text{ is open in }C\\
+        &\mathcal{D}=g(\mathcal{C})\\
+        \Rightarrow&\mathcal{A}\times\mathcal{C}\text{ is open in }A\times C\\
+        &(f\times g)^{-1}(\mathcal{B} \times\mathcal{D} )\\
+        =&(f\times g)^{-1}(f(\mathcal{A})\times g(\mathcal{C}))\\
+        =&(f\times g)^{-1}((f\times g)(\mathcal{A} \times\mathcal{C} ))\\
+        =&\mathcal{A} \times\mathcal{C} \\
+        &\mathcal{A}\times\mathcal{C}\text{ is open in }A\times C\text{ for }\mathcal{B} \times\mathcal{D}\text{ is a basis of }B\times D\\
+        \Rightarrow&f\times g\text{ is continuous}\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 3}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &d(x,y)=0\Leftrightarrow x=y\\
+        &d(x,y)=0\lor d(x,y)=1\\
+        \Rightarrow&d(x,y)\geqslant0\\
+        &\text{Case }d(x,y)=0:\\
+        &\text{subcase 1}:x=y=z\\
+        \Rightarrow&d(x,y)=d(x,z)+d(y,z)=0\\
+        &\text{subcase 2}:x=y\ne z\\
+        \Rightarrow&d(x,y)=0<d(y,z)+d(x,z)=2\\
+        &\text{Case }d(x,y)=1:\\
+        &\text{subcase 1}:x\ne y=z\\
+        &d(x,y)=d(x,z)+d(y,z)=1\\
+        &\text{subcase 2}:x\ne y\ne z\\
+        &d(x,y)=1<d(x,z)+d(y,z)=2\\
+        \Rightarrow&d(x,y)\leqslant d(x,z)+d(y,z)\\
+        &x=y\implies d(x,y)=d(y,x)=0\\
+        &x\ne y\implies d(x.y)=d(y,x)=1\\
+        \Rightarrow&d(x,y)=d(y,x)\\
+        \Rightarrow&d(x,y)\text{ is a metric}\\
+    \end{split}
+\end{equation*}
+\end{document}
