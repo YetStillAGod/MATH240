@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section*{Question 1}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &x\coloneqq(x_1,x_2,...,x_n)\\
+        &y\coloneqq(y_1,y_2,...,y_n)\\
+        &\rho(x,y)=\max(|x_i-y_i|)\coloneqq |x_k-y_k|\\
+        &d(x,y)=\sqrt{\sum_{i}^{n}(x_i-y_i)^2}\\
+        &\\
+        &\rho (x,y)\leqslant d(x,y):\\
+        &|x_k-y_k|=\sqrt{(x_k-y_k)^2}\\
+        &k\in\{i,0<i\leqslant n\}\\
+        \Rightarrow&(x_k-y_k)^2\leqslant \sum_{i}^{n}(x_i-y_i)^2\\
+        \Rightarrow&\rho(x,y)\leqslant d(x,y)\\
+        &\text{Equality is taken when }x=y:\rho(x,y)=d(x,y)=0\\
+        &\\
+        &d(x,y)\leqslant\sqrt{n}\rho(x,y)\\
+        &\sqrt{n}\rho(x,y)=\sqrt{n}|x_k-y_k|=\sqrt{n(x_k-y_k)^2}\\
+        &\max(|x_i-y_i|)=|x_k-y_k|\\
+        \Rightarrow&(x_k-y_k)^2=\max((x_i-y_i)^2)\\
+        \Rightarrow&\sum_{i}^{n}(x_i-y_i)^2\leqslant n(x_k-y_k)^2\\
+        \Rightarrow&d(x,y)\leqslant\sqrt{n}\rho(x,y)\\
+        &\text{Equality is taken when }x=y:d(x,y)=\sqrt{n}\rho(x,y)=0\\
+        \Rightarrow&\rho (x,y)\leqslant d(x,y)\leqslant\sqrt{n}\rho(x,y)\\
+        &\text{Equality is taken when }x=y:\rho(x,y)=d(x,y)=\sqrt{n}\rho(x,y)=0
+    \end{align*}
+\end{proof}
+
+\newpage
+
+\section*{Question 2}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &\text{Suppose}:\exists \{x_n\}^{\infty}_{n=1}\subset A:\{x_n\}^{\infty}_{n=1}\to 100\\
+        \Rightarrow&\forall U_{100},\exists N\in \mathbb{Z} _+:\forall i \geqslant N,x_i\in U_{100} \\
+        &U\coloneqq [100,101)\\
+        \Rightarrow&U\text{ is a neighborhood of }100\\
+        &A\cap U=\emptyset\\
+        &\{x_n\}^\infty_{n=1}\subset A\\
+        \Rightarrow&\{x_n\}^\infty_{n=1}\cap U=\emptyset\\
+        \Rightarrow&\nexists N\in \mathbb{Z} _+:\forall i \geqslant N,x_i\in U\\
+        \Rightarrow&\nexists \{x_n\}^{\infty}_{n=1}\subset A:\{x_n\}^{\infty}_{n=1}\to 100\\
+    \end{align*}
+\end{proof}
+
+\newpage
+
+\section*{Question 3}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &B_d(x,\frac{1}{10})=\{y\in\mathbb{R}^n|d(x,y)<\frac{1}{10}\}=\{y\in\mathbb{R}^n|d(x,y)=0\}=\{x\}\\
+        &B_d(x,0.9)=\{y\in\mathbb{R}^n|d(x,y)<0.9\}=\{y\in\mathbb{R}^n|d(x,y)=0\}=\{x\}\\
+        &B_d(x,1)=\{y\in\mathbb{R}^n|d(x,y)<1\}=\{y\in\mathbb{R}^n|d(x,y)=0\}=\{x\}\\
+        &B_d(x,2)=\{y\in\mathbb{R}^n|d(x,y)<2\}=\{y\in\mathbb{R}^n|d(x,y)=0\text{ or }1\}=\mathbb{R} ^n\\
+        &B_d(x,100)=\{y\in\mathbb{R}^n|d(x,y)<100\}=\{y\in\mathbb{R}^n|d(x,y)=0\text{ or }1\}=\mathbb{R} ^n\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &y\coloneqq (y_1,y_2,...,y_n)\\
+        &B_\rho(x,\varepsilon )=\{y\in \mathbb{R} ^n|\rho(x,y)<\varepsilon\}\\
+        &\rho(x,y)=\max(|x_k-y_k|)\\
+        &\max(|x_k-y_k|)<\varepsilon\\
+        \Rightarrow&\forall i\in[1,n]\cap \mathbb{Z}:|x_i-y_i|<\varepsilon\\
+        \Rightarrow&\forall i\in[1,n]\cap \mathbb{Z}:y_i\in(x_i-\varepsilon,x_i+\varepsilon)\Leftrightarrow \rho(x,y)<\varepsilon\\
+        \Rightarrow&\forall y:\rho(x,y)<\varepsilon,y\in (x_1-\varepsilon,x_1+\varepsilon)\times ...\times (x_n-\varepsilon,x_n+\varepsilon)\\
+        &\forall y:\rho(x,y)<\varepsilon,y\in B_\rho(x,\varepsilon)\\
+        \Rightarrow&B_\rho(x,\varepsilon)=(x_1-\varepsilon,x_1+\varepsilon)\times ...\times (x_n-\varepsilon,x_n+\varepsilon)\\
+    \end{align*}
+\end{proof}    
+\end{document}
