@@ -1,0 +1,96 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{gensymb}
+
+\begin{document}
+
+\section*{Question 1}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &B_n\coloneqq \bigcup_{i=1}^{n}A_i\\
+        \Rightarrow&B_1\subset B_2\subset B_3...\\
+        &B\coloneqq \bigcup_{n>1}B_n\\
+        &\text{Let } U\cap V=\emptyset:B=U\cup V\\
+        &\text{Suppose }B_1\in U\\
+        \Rightarrow&B_n\in U\forall n\\
+        \Rightarrow&U=B,V=\emptyset\\
+        \Rightarrow&B\text{ is connected}\\
+        \Rightarrow&\bigcup A_n\text{ is connected}\\
+    \end{align*}
+\end{proof}
+
+\newpage
+
+\section*{Question 2}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &x_0\in U\\
+        &A\coloneqq \{y\in U|\exists f:[0,1]\rightarrow U:f(0)=x_0,f(1)=y\}\\
+        &\text{non-empty}:\\
+        &\text{constant map }f\\
+        \Rightarrow&x_0\in A\\
+        &\text{open}:\\
+        &y\in U\\
+        &B_d(y,\varepsilon)\in U,\varepsilon>0\\
+        &\forall z\in B_d(y,\varepsilon)\\
+        \Rightarrow&\exists g\text{ maps from }y\text{ to }z\\
+        &g\text{ is continuous}\\
+        &\text{combine }f\land g\text{ is a path from }x\text{ to }z\\
+        \Rightarrow&z\in A\\
+        \Rightarrow&B_d(y,\varepsilon)\in A\\
+        \Rightarrow&A\text{ is open}\\
+        &\text{close}:\\
+        &\exists y\in U:y\in \overline{A}\\
+        &B_d(y,\varepsilon)\in U,\varepsilon>0\\
+        \Rightarrow&B_d(y,\varepsilon)\cap A\ne \emptyset\\
+        &\exists p\in A\cap B_d(y,\varepsilon)\\
+        &\exists g\text{ maps from }x\text{ to }p\\
+        &g\text{ is continuous}\\
+        &\text{combine }f\land g\text{ is a path from }p\text{ to }y\\
+        \Rightarrow&y\in A\\
+        \Rightarrow&\forall y\in \overline{A},y\in A\\
+        \Rightarrow&A\text{ is closed}\\
+        &A\text{ is non empty and clopen}\\
+        \Rightarrow&U\text{ is path connected}\\
+    \end{align*}
+\end{proof}
+
+\newpage
+
+\section*{Question 3}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &g:[0,1]\rightarrow[-1,1]\\
+        &g(x)\coloneqq f(x)-x\\
+        \Rightarrow&g\text{ is continuous}\\
+        &f(0)\in [0,1],x=0\\
+        \Rightarrow&g(0)\in[0,1]\\
+        &f(1)\in[0,1],x=1\\
+        \Rightarrow&g(1)\in[-1,0]\\
+        \Rightarrow&g(1)\leqslant0\leqslant g(0)\\
+        &\text{By IVT}:\\
+        &\exists p\in[0,1]:g(p)=0\\
+        \Rightarrow&f(p)-p=0\implies f(p)=p\\
+        \Rightarrow&p\in[0,1]\text{ is a fixed point}\\
+    \end{align*}
+\end{proof}
+\end{document}
