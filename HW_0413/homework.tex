@@ -1,0 +1,123 @@
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section*{Question 1}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &\forall U\text{ is closed }\in X\\
+        &X\text{ is compact}\\
+        \Rightarrow&U\text{ is compact}\\
+        \Rightarrow&f(U)\text{ is compact}\\
+        &Y\text{ is Hausdorff}\\
+        \Rightarrow&f(U)\text{ is closed}\\
+        &\forall U\text{ is closed }\in X:f(U)\text{ is closed}\\
+        \Rightarrow&f\text{ is a closed map}\\
+    \end{align*}
+\end{proof}
+
+\newpage
+
+\section*{Question 2}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &M=(S,d)\text{ is metric space}\\
+        &C\subset M\\
+        &m\in M\\
+        &n\in \mathbb{N} \\
+        \Rightarrow&B_n(m)\text{ is an open ball of }m\\
+        &\forall x\in C,\exists n:d(x,m)<n \\
+        \Rightarrow&C\subseteq \bigcup_{n=1}^{\infty}B_n(m)\\
+        \Rightarrow&\{B_n(m)|n\in\mathbb{N} \}\text{ is an open cover of }C\\
+        &C\text{ is compact}\\
+        \Rightarrow&C\text{ has a finite subcover}\\
+        &\{B_{n_1}(m),B_{n_2}(m),...,B_{n_p}(m)\}\\
+        &n\coloneqq \max(n_1,n_2,...,n_p)\\
+        &C\subseteq\bigcup_{n=1}^{p}B_{n_p}(m)=B_n(m)\\
+        \Rightarrow&C\text{ is bounded}\\
+    \end{align*}
+\end{proof}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &M=(S,d)\text{ is metric space}\\
+        &C\subset M\\
+        &m\in C\\
+        &n\in M\setminus C\\
+        &U_m\coloneqq B(m,\frac{d(m,n)}{2})\\
+        &U_n\coloneqq B(n,\frac{d(m,n)}{2})\\
+        \Rightarrow&U_m\cap U_n=\emptyset\\
+        &\{U_m,m\in C\}\text{ is a cover of }C\\
+        &C\text{ is compact}\\
+        \Rightarrow&m\text{ has finitely many neighborhoods}:\{U_{m_1},U_{m_2},...,U_{m_p}\}\\
+        &\forall i\geqslant p\in \mathbb{N} ,U_{m_i}\cap U_{n_i}=\emptyset\\
+        \Rightarrow&\bigcap_{i=1}^{p}U_{n_i}\cap A=\emptyset\\
+        &\bigcap_{i=1}^{p}U_{n_i}\text{ is a neighborhood of }n\\
+        \Rightarrow&A\text{ is closed}\\
+    \end{align*}
+\end{proof}
+
+~
+
+\begin{align*}
+    &X\text{ is discrete topolgy}\\
+    \Rightarrow&C\subseteq X\text{ is closed}\\
+    &\forall x\in C,\exists x_0\in C:d(x,x_0)<1\\
+    \Rightarrow&C\text{ is bounded}\\
+    &\{\{x\},x\in C\}\text{ is an open cover of }C\\
+    &x\text{ is infinite}\\
+    \Rightarrow&C\text{ is not compact}\\
+\end{align*}
+
+\newpage
+
+\section*{Question 3}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &\forall a\in A\\
+        &U_a\in A\text{ is a neighborhood}\\
+        &\forall b\in B\\
+        &U_b\in B\text{ is a neighborhood}\\
+        \Rightarrow&U_a\cap U_b=\emptyset\\
+        &\{U_{a_1},U_{a_2},...,U_{a_n}\}\text{ is an open cover of }A\text{ since }A\text{ is compact}\\
+        &V_a\coloneqq\bigcup_{i=1}^{n}U_{a_i}\\
+        &\forall i,A\subseteq V_{a_i}\\
+        &V_A\coloneqq \bigcap_{i=1}^{n}V_{a_i}\\
+        &V_A\text{ is open}\\
+        &A\subseteq V_A\\
+        &V_b\coloneqq \bigcap_{i=1}^{n}U_{b_i}\\
+        &\{V_{b_n},n\in\mathbb{N} \}\text{ is an open cover of }B\\
+        &B\text{ is compact}\\
+        \Rightarrow&\{V_{b_1},V_{b_2},...,V_{b_n}\}\text{ is an open cover of }B\\
+        &V_B\coloneqq\bigcup_{i=1}^{n}V_{b_i}\\
+        &B\subseteq V_B\\
+        &\forall i\geqslant n\in \mathbb{N} ,V_{b_i}\cap V_A=\emptyset\\
+        &\bigcup_{i=1}^{n}V_{b_i}\cap V_A=\bigcup_{i=1}^{n}(V_{b_i}\cap V_A)\\
+        \Rightarrow&\bigcup_{i=1}^{n}V_{b_i}\cap V_A=\emptyset\\
+        \Rightarrow&V_B\cap V_A=\emptyset\\
+    \end{align*}
+\end{proof}
+\end{document}
