@@ -1,0 +1,174 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+\section*{Question 1}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &\forall (x,y)\in X\times X:\\
+        &V=(d(x,y)-\varepsilon,d(x,y)+\varepsilon)\text{ is open in }\mathbb{R}\\
+        &(x,y)\in d^{-1}(V)\\
+        \Rightarrow&V\text{ is a nbhd of }d((x,y))\\
+        &U_{(x,y)}\coloneqq B_d(x,\frac{1}{2}\varepsilon)\times B_d(y,\frac{1}{2}\varepsilon)\\
+        &\forall (x',y')\ne(x,y)\in U_{(x,y)}:\\
+        &|d(x,y)-d(x',y')|=|d(x,y)-d(x',y)+d(x',y)-d(x',y')|\\
+        &|d(x,y)-d(x',y)+d(x',y)-d(x',y')|\leqslant |d(x,y)-d(x',y)|+|d(x',y)-d(x',y')|\\
+        &|d(x,y)-d(x',y)|+|d(x',y)-d(x',y')|\leqslant d(x,x')+d(y,y')\\
+        \Rightarrow&d(x,y)-d(x',y')\leqslant d(x,x')+d(y,y')\\
+        \Rightarrow&d((x',y'))\in V\\
+        &(x',y')\in d^{-1}(V)\\
+        &\text{Since }(x',y')\text{ is arbitrary}:\\
+        \Rightarrow&U_{(x,y)}\subseteq d^{-1}(V)\\
+        &d^{-1}(V)=\bigcup_{(x,y)\in d^{-1}(V)}\text{ open in }X\times X\\
+        \Rightarrow&d\text{ is continuous}\\
+    \end{align*}
+\end{proof}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &\text{Suppose }\{x_n\}_{n=1}^\infty\rightarrow x\\
+        &\forall \varepsilon>0,\exists n_\varepsilon \in \mathbb{Z} _+:d(x_n,x)<\varepsilon,\forall n\geqslant n_\epsilon\\
+        &\forall m,n\geqslant n_\varepsilon\\
+        &d(x_n,x_m)\leqslant d(x_n,x)+d(x_m,x)<2\varepsilon \\
+        \Rightarrow&\{x_n\}_{n=1}^\infty\text{ is cauchy}\\
+    \end{align*}
+\end{proof}
+
+\newpage
+
+\section*{Question 2}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &F:X\rightarrow \mathbb{R} \\
+        &F(x)=d(f(x),g(x))\\
+        &G:X\rightarrow Y\times Y\\
+        &G(x)=(f(x),g(x))\\
+        &H(x):Y\times Y\rightarrow \mathbb{R} \\
+        &H((a,b))=d(a,b)\\
+        \Rightarrow&F(x)=H\circ G(x)\\
+        &f(x),g(x)\text{ are continuous}\\
+        \Rightarrow&G(x)=(f(x),g(x))\text{ is continuous}\\
+        &Y\text{ is metric space}\\
+        &\text{ From Problem 1a}:\\
+        &H((a,b))=d(a,b)\text{ is continuous}\\
+        \Rightarrow&F(x)=H\circ G(x)\text{ is continuous}\\
+    \end{align*}
+\end{proof}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\subsubsection*{i}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &X\text{ is compact}\\
+        &F:X\rightarrow \mathbb{R} \\
+        &F(x)=d(f(x),g(x))\text{ is continuous}\\
+        \Rightarrow&F(x)\text{ is bounded}\\
+        &\{d(f(x),g(x))|x\in X\}\text{ is bounded}\\
+        \Rightarrow&\rho\text{ is well defined}\\
+    \end{align*}
+\end{proof}
+
+~
+
+\subsubsection*{ii}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &F(x)=d(f(x),g(x))\text{ is continuous}\\
+        &X\text{ is closed and bounded}\\
+        \Rightarrow&\forall x\in X,\exists x_{max}:F(x)\leqslant F(x_{max})\\
+        &F(x_{max})=\max(\{F(x)|x\in X\})=\max(\{d(f(x),g(x))|x\in X\})\\
+        &F(x_{max})\text{ is the upper bound of }F(x)\\
+        \Rightarrow&F(x_{max})=\text{sup}(\{d(f(x),g(x))|x\in X\})\\
+        \Rightarrow&\max(\{d(f(x),g(x))|x\in X\})=\rho(f,g)\\
+    \end{align*}
+\end{proof}
+
+~
+
+\subsubsection*{iii}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &\rho(f,g)=\max(\{d(f(x),g(x))|x\in X\})\\
+        &\rho(g,f)=\max(\{d(g(x),f(x))|x\in X\})\\
+        \Rightarrow&\rho(g,f)=\rho(f,g)\\
+        &\\
+        &\text{Suppose }\rho(f,g)=0\\
+        &\max(\{d(g(x),f(x))|x\in X\})=0\\
+        &\forall x\in X,d(f(x),g(x))=0\\
+        \Rightarrow&f(x)=g(x)\\
+        &\\
+        &\rho(f,g)=\max(\{d(f(x),g(x))|x\in X\})\\
+        &\forall f,g\in C(X,Y),d(f(x),g(x))\geqslant 0\\
+        \Rightarrow&\max(\{d(f(x),g(x))|x\in X\})\geqslant 0\\
+        &\rho(f,g)\geqslant 0\\
+        &\\
+        &\rho(f,g)=\max(\{d(f(x),g(x))|x\in X\})\\
+        &\rho(f,h)+\rho(g,h)=\max(\{d(f(x),h(x))|x\in X\})+\max(\{d(h(x),g(x))|x\in X\})\\
+        &\rho(f,h)+\rho(g,h)=\max(\{d(f(x),h(x))+d(h(x),g(x))|x\in X\})\\
+        &d(f(x),g(x))\leqslant d(f(x),h(x))+d(h(x),g(x))\\
+        \Rightarrow&\max(\{d(f(x),g(x))|x\in X\})\leqslant\max(\{d(f(x),h(x))+d(h(x),g(x))|x\in X\})\\
+        &\rho(f,g)\leqslant\rho(f,h)+\rho(g,h)\\
+        \Rightarrow&\rho\text{ is a metric}\\
+    \end{align*}
+\end{proof}
+
+~
+
+\subsection*{Problem c}
+
+~
+
+\begin{align*}
+    &\{f_n\}_{n=1}^{\infty}\text{ is Cauchy}\\
+    \Rightarrow&\{f_n\}_{n=1}^{\infty}\text{ converges}\\
+    &\forall x\in X,d(f_n(x),f_m(x))\leqslant \rho(f_n,f_m)\\
+    \Rightarrow&\forall \varepsilon >0,\exists n_\varepsilon:d(f_n(x),f_m(x))\leqslant \rho(f_n,f_m)<\varepsilon\\
+    \Rightarrow&\{f_n(x)\}_{x=1}^{\infty}\text{ converges}\\
+    &\forall \varepsilon >0,\exists n_\varepsilon:d(f_n(x),f_m(x))<\varepsilon\\
+    &\{f_n(x)\}_{x=1}^{\infty}\text{ is Cauchy}\\
+\end{align*}
+\end{document}
